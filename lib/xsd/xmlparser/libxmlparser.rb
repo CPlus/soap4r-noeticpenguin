@@ -7,7 +7,7 @@
 
 
 require 'xsd/xmlparser'
-require 'xml/libxml'
+require 'libxml'
 
 
 module XSD
@@ -15,6 +15,7 @@ module XMLParser
 
 
 class LibXMLParser < XSD::XMLParser::Parser
+  include LibXML
   include XML::SaxParser::Callbacks
 
   def do_parse(string_or_readable)
